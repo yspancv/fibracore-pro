@@ -162,6 +162,23 @@ const LANG = {
 let currentLang = localStorage.getItem("lang") || "ES";
 
 function applyLang() {
+  // Update visible text
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (LANG[currentLang][key]) {
+      el.textContent = LANG[currentLang][key]; // instant update
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (LANG[currentLang][key]) {
+      el.setAttribute("placeholder", LANG[currentLang][key]);
+    }
+  });
+}
+/*function applyLang() {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (LANG[currentLang][key]) el.innerText = LANG[currentLang][key];
@@ -170,6 +187,6 @@ function applyLang() {
     const key = el.getAttribute("data-i18n-placeholder");
     if (LANG[currentLang][key]) el.setAttribute("placeholder", LANG[currentLang][key]);
   });
-}
+}*/
 
 document.addEventListener("DOMContentLoaded", applyLang);
