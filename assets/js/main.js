@@ -1,19 +1,19 @@
 // assets/js/main.js (producción)
 
-document.addEventListener("DOMContentLoaded", () => {  
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;  
-      // Save
-      localStorage.setItem("lang", lang);
-      window.currentLang = lang;  
-      // Apply immediately
-      if (typeof applyLang === "function") {
-        applyLang();
-      }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelectorAll(".lang-btn").forEach(btn => {
+		btn.addEventListener("click", () => {
+		const lang = btn.dataset.lang;
+    // Save
+    localStorage.setItem("lang", lang);
+    window.currentLang = lang;
+    // Apply immediately
+    if (typeof applyLang === "function") {
+      applyLang();
+    }
   });
-/*  document.querySelectorAll(".lang-btn").forEach(btn => {
+});
+  /*document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.dataset.lang;
       localStorage.setItem("lang", lang);
