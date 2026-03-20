@@ -77,3 +77,17 @@ footer { background: var(--color-dark); color:#fff; text-align: center; padding:
   nav ul { position: fixed; inset: 60px 0 0 0; background: var(--color-primary); flex-direction: column; padding: 20px; display: none; }
   .hamburger { display: inline-block; }
 }
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
