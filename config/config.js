@@ -2,7 +2,7 @@
 const CONFIG = {
   NOMBRE_SUCURSAL: "Fibracore.pro",
   ZONA_COBERTURA: "Colombia / Latam",
-  DIRECCION: "Kr 19 # 160 05 Bogotá",
+  DIRECCION: "Kr 2026 # 2026 05 Bogotá",
   EMAIL_CONTACTO: "contacto@fibracore.pro",
   TELEFONO: "+57 3056 57 2251",
   WHATSAPP: "+573056572251",
