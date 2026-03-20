@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof applyLang === 'function') applyLang();
     });
   });*/
+	btn.addEventListener("click", () => {
+    const lang = btn.dataset.lang; // This gets "ES", "EN", etc.
+    localStorage.setItem("lang", lang);
+    window.currentLang = lang; // This updates the global variable
+    if (typeof applyLang === "function") {
+      applyLang(); // This runs the dictionary update
+    }
+});
 
   const burger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav ul");
