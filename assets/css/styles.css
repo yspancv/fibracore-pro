@@ -54,10 +54,46 @@ nav ul.open { display: flex; }
 .section h2 { margin-top: 0; }
 
 /* CARDS */
-.cards { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+/* The container for all product cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Individual Card - Orientek Style */
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth hover */
+}
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Floating effect */
+    border-color: #ff6600; /* Orientek Orange highlight */
+    transform: translateY(-5px);
+}
+/* The SVG Icons (OTDR, Fusion, etc.) */
+.card img {
+    width: 120px; /* Standard size */
+    height: auto;
+    margin-bottom: 20px;
+    /* Soft shadow to make the SVG look 3D/Premium */
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+.card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Professional look */
+}
+/*.cards { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
 .card { grid-column: span 12; background: #fff; border: 1px solid #E5E7EB; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
 .card img, .card svg { width: 100%; height: auto; border-radius: 8px; }
-.card h3 { margin-top: 12px; margin-bottom: 8px; }
+.card h3 { margin-top: 12px; margin-bottom: 8px; } */
 
 /* FORMULARIOS */
 form input, form textarea, form select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #D1D5DB; margin-bottom: 12px; font-size: 1rem; }
