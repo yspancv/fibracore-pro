@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fibracore.pro: soluciones en fibra óptica en Colombia y LATAM. Instalación FTTx, patch cords, venta de equipos y soporte." />
+  <title>Fibracore.pro</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <title>Quiénes Somos - Fibracore.pro</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header>
+    <a class="brand" href="index.html" aria-label="Fibracore.pro Home">
+      <img src="assets/img/logo.svg" alt="Fibracore.pro"/>
+      <span>Fibracore.pro</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+        <li><a href="quienes-somos.html" data-i18n="menu_about">Quiénes Somos</a></li>
+        <li><a href="productos.html" data-i18n="menu_products">Productos</a></li>
+        <li><a href="solicitud.html" data-i18n="menu_request">Solicitud</a></li>
+        <li><a href="soporte.html" data-i18n="menu_support">Soporte</a></li>
+        <li><a href="contactanos.html" data-i18n="menu_contact">Contáctanos</a></li>
+        <li><a href="empleo.html" data-i18n="menu_jobs">Empleo</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+
+    <div class="lang-selector" aria-label="Selector de idioma">
+      <button class="lang-btn" data-lang="ES">ES</button>
+      <button class="lang-btn" data-lang="EN">EN</button>
+      <button class="lang-btn" data-lang="PT">PT</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section">
+      <h1 data-i18n="menu_about">Quiénes Somos</h1>
+      <p><strong>Fibracore.pro</strong> es una sucursal especializada en soluciones de fibra óptica para Colombia y LATAM. Ofrecemos instalación FTTx, fabricación local de patch cords, empalme, certificación y soporte técnico.</p>
+      <h2>Visión</h2>
+      <p>Impulsar la conectividad óptica de la región con precisión, calidad y soporte experto.</p>
+      <h2>Cobertura</h2>
+      <p>Operamos en: <strong id="zona_cobertura"></strong></p>
+      <h2>Hitos</h2>
+      <ul>
+        <li>+10 años de experiencia combinada en fibra óptica.</li>
+        <li>Laboratorio de patch cords con estándares de calidad internacional.</li>
+        <li>Más de 2.000 instalaciones FTTx ejecutadas en la región.</li>
+      </ul>
+      <script>document.getElementById("zona_cobertura").innerText = CONFIG.ZONA_COBERTURA;</script>
+    </section>
+  </main>
+  <footer>
+    <p>
+      © <span id="year"></span> <strong>Fibracore.pro</strong> — 
+      <span id="f_direccion"></span> · 
+      <a id="f_email"></a> · 
+      <a id="f_tel"></a> ·
+      <a id="f_whatsapp" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>

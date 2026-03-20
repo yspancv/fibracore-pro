@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fibracore.pro: soluciones en fibra óptica en Colombia y LATAM. Instalación FTTx, patch cords, venta de equipos y soporte." />
+  <title>Fibracore.pro</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <title>Empleo - Fibracore.pro</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header>
+    <a class="brand" href="index.html" aria-label="Fibracore.pro Home">
+      <img src="assets/img/logo.svg" alt="Fibracore.pro"/>
+      <span>Fibracore.pro</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+        <li><a href="quienes-somos.html" data-i18n="menu_about">Quiénes Somos</a></li>
+        <li><a href="productos.html" data-i18n="menu_products">Productos</a></li>
+        <li><a href="solicitud.html" data-i18n="menu_request">Solicitud</a></li>
+        <li><a href="soporte.html" data-i18n="menu_support">Soporte</a></li>
+        <li><a href="contactanos.html" data-i18n="menu_contact">Contáctanos</a></li>
+        <li><a href="empleo.html" data-i18n="menu_jobs">Empleo</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+
+    <div class="lang-selector" aria-label="Selector de idioma">
+      <button class="lang-btn" data-lang="ES">ES</button>
+      <button class="lang-btn" data-lang="EN">EN</button>
+      <button class="lang-btn" data-lang="PT">PT</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section">
+      <h1 data-i18n="jobs_title">Oportunidades Laborales</h1>
+      <p data-i18n="jobs_intro">En Fibracore.pro buscamos técnicos e ingenieros apasionados por la fibra óptica.</p>
+      <h2>Vacantes Actuales</h2>
+      <div class="cards">
+        <div class="card"><h3>Técnico de Campo FTTx</h3><p>Instalación, empalme, medición y certificación de redes ópticas.</p></div>
+        <div class="card"><h3>Ingeniero Preventa / Soporte</h3><p>Atención a clientes, demos, elaboración de propuestas técnicas.</p></div>
+        <div class="card"><h3>Especialista en Laboratorio</h3><p>Fabricación de patch cords, control de calidad y manejo de equipos ópticos.</p></div>
+      </div>
+      <h2>Aplicar a una Vacante</h2>
+      <form id="form_empleo" enctype="multipart/form-data">
+        <input type="text" id="cv_nombre" data-i18n-placeholder="ph_name" placeholder="Nombre (*)" required/>
+        <input type="email" id="cv_email" data-i18n-placeholder="ph_email" placeholder="Email (*)" required/>
+        <label for="cv_archivo">Cargar CV (PDF, DOC, DOCX) (*)</label>
+        <input type="file" id="cv_archivo" accept=".pdf,.doc,.docx" required/>
+        <textarea id="cv_msg" rows="5" data-i18n-placeholder="ph_jobs_message" placeholder="Mensaje (opcional)"></textarea>
+        <button type="submit">Enviar Aplicación</button>
+      </form>
+      <p style="margin-top:10px; color:var(--color-muted); font-size:0.9rem;">Al enviar tu CV aceptas que podremos usar esta información únicamente para procesos de selección.</p>
+    </section>
+  </main>
+  <footer>
+    <p>
+      © <span id="year"></span> <strong>Fibracore.pro</strong> — 
+      <span id="f_direccion"></span> · 
+      <a id="f_email"></a> · 
+      <a id="f_tel"></a> ·
+      <a id="f_whatsapp" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fibracore.pro: soluciones en fibra óptica en Colombia y LATAM. Instalación FTTx, patch cords, venta de equipos y soporte." />
+  <title>Fibracore.pro</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <title>Solicitud - Fibracore.pro</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header>
+    <a class="brand" href="index.html" aria-label="Fibracore.pro Home">
+      <img src="assets/img/logo.svg" alt="Fibracore.pro"/>
+      <span>Fibracore.pro</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+        <li><a href="quienes-somos.html" data-i18n="menu_about">Quiénes Somos</a></li>
+        <li><a href="productos.html" data-i18n="menu_products">Productos</a></li>
+        <li><a href="solicitud.html" data-i18n="menu_request">Solicitud</a></li>
+        <li><a href="soporte.html" data-i18n="menu_support">Soporte</a></li>
+        <li><a href="contactanos.html" data-i18n="menu_contact">Contáctanos</a></li>
+        <li><a href="empleo.html" data-i18n="menu_jobs">Empleo</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+
+    <div class="lang-selector" aria-label="Selector de idioma">
+      <button class="lang-btn" data-lang="ES">ES</button>
+      <button class="lang-btn" data-lang="EN">EN</button>
+      <button class="lang-btn" data-lang="PT">PT</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section" aria-label="Solicitud de cotización o servicio">
+      <h1 data-i18n="request_title">Solicitud</h1>
+      <p data-i18n="request_intro">Diligencia el formulario. Los campos marcados (*) son obligatorios.</p>
+      <form id="solicitud-form" novalidate>
+        <label for="sol_nombre" data-i18n="form_name_label">Nombre (*)</label>
+        <input type="text" id="sol_nombre" name="sol_nombre" data-i18n-placeholder="ph_name" placeholder="Tu nombre" required/>
+        <label for="sol_email" data-i18n="form_email_label">Email (*)</label>
+        <input type="email" id="sol_email" name="sol_email" data-i18n-placeholder="ph_email" placeholder="tucorreo@dominio.com" required/>
+        <label for="sol_tel" data-i18n="form_phone_label">Teléfono (opcional)</label>
+        <input type="tel" id="sol_tel" name="sol_tel" data-i18n-placeholder="ph_phone" placeholder="+57 ..."/>
+        <label for="sol_mensaje" data-i18n="form_message_label">Mensaje (*)</label>
+        <textarea id="sol_mensaje" name="sol_mensaje" rows="6" data-i18n-placeholder="ph_message" placeholder="Cuéntanos tu necesidad..." required></textarea>
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+          <button type="submit" data-i18n="form_send_btn">Enviar solicitud</button>
+          <a class="btn" id="sol_whatsapp" target="_blank">WhatsApp</a>
+        </div>
+        <p style="margin-top:10px; color:var(--color-muted);" data-i18n="request_note">Si tu cliente de correo no se abre automáticamente, copia el contenido y envíalo a nuestro email.</p>
+      </form>
+      <script>document.getElementById("sol_whatsapp").href = `https://wa.me/${CONFIG.WHATSAPP.replace(/\D/g,"")}`;</script>
+    </section>
+  </main>
+  <footer>
+    <p>
+      © <span id="year"></span> <strong>Fibracore.pro</strong> — 
+      <span id="f_direccion"></span> · 
+      <a id="f_email"></a> · 
+      <a id="f_tel"></a> ·
+      <a id="f_whatsapp" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>

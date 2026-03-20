@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fibracore.pro: soluciones en fibra óptica en Colombia y LATAM. Instalación FTTx, patch cords, venta de equipos y soporte." />
+  <title>Fibracore.pro</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <title>Contáctanos - Fibracore.pro</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header>
+    <a class="brand" href="index.html" aria-label="Fibracore.pro Home">
+      <img src="assets/img/logo.svg" alt="Fibracore.pro"/>
+      <span>Fibracore.pro</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+        <li><a href="quienes-somos.html" data-i18n="menu_about">Quiénes Somos</a></li>
+        <li><a href="productos.html" data-i18n="menu_products">Productos</a></li>
+        <li><a href="solicitud.html" data-i18n="menu_request">Solicitud</a></li>
+        <li><a href="soporte.html" data-i18n="menu_support">Soporte</a></li>
+        <li><a href="contactanos.html" data-i18n="menu_contact">Contáctanos</a></li>
+        <li><a href="empleo.html" data-i18n="menu_jobs">Empleo</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+
+    <div class="lang-selector" aria-label="Selector de idioma">
+      <button class="lang-btn" data-lang="ES">ES</button>
+      <button class="lang-btn" data-lang="EN">EN</button>
+      <button class="lang-btn" data-lang="PT">PT</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section">
+      <h1 data-i18n="contact_title">Contáctanos</h1>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:var(--max-width); margin:auto;">
+        <div>
+          <h2>Información</h2>
+          <p><strong>Sucursal:</strong> Fibracore.pro</p>
+          <p><strong>Dirección:</strong> <span id="c_direccion"></span></p>
+          <p><strong>Email:</strong> <a id="c_email"></a></p>
+          <p><strong>Teléfono:</strong> <a id="c_tel"></a></p>
+          <p><strong>WhatsApp:</strong> <a id="c_whatsapp" target="_blank">Click para abrir</a></p>
+          <h3>Horario</h3>
+          <p>Lunes a Viernes — 8:00 a 18:00</p>
+        </div>
+        <form id="form_contact">
+          <h2>Envíanos un mensaje</h2>
+          <input type="text" id="ct_nombre" data-i18n-placeholder="ph_name" placeholder="Nombre (*)" required/>
+          <input type="email" id="ct_email" data-i18n-placeholder="ph_email" placeholder="Email (*)" required/>
+          <textarea id="ct_mensaje" rows="5" data-i18n-placeholder="ph_message" placeholder="Mensaje (*)" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <h2 style="margin-top:40px;">Ubicación</h2>
+      <div style="margin-top:20px;">
+        <iframe id="map_frame" title="Mapa sucursal" width="100%" height="380" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <script>
+        document.getElementById("c_direccion").innerText = CONFIG.DIRECCION;
+        document.getElementById("c_email").innerText = CONFIG.EMAIL_CONTACTO;
+        document.getElementById("c_email").href = `mailto:${CONFIG.EMAIL_CONTACTO}`;
+        document.getElementById("c_tel").innerText = CONFIG.TELEFONO;
+        document.getElementById("c_tel").href = `tel:${CONFIG.TELEFONO.replace(/\s|\+/g,"")}`;
+        document.getElementById("c_whatsapp").href = `https://wa.me/${CONFIG.WHATSAPP.replace(/\D/g,"")}`;
+        document.getElementById("map_frame").src = CONFIG.MAPA_IFRAME || "about:blank";
+      </script>
+    </section>
+  </main>
+  <footer>
+    <p>
+      © <span id="year"></span> <strong>Fibracore.pro</strong> — 
+      <span id="f_direccion"></span> · 
+      <a id="f_email"></a> · 
+      <a id="f_tel"></a> ·
+      <a id="f_whatsapp" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>

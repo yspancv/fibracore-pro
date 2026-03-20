@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fibracore.pro: soluciones en fibra óptica en Colombia y LATAM. Instalación FTTx, patch cords, venta de equipos y soporte." />
+  <title>Fibracore.pro</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header>
+    <a class="brand" href="index.html" aria-label="Fibracore.pro Home">
+      <img src="assets/img/logo.svg" alt="Fibracore.pro"/>
+      <span>Fibracore.pro</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+        <li><a href="quienes-somos.html" data-i18n="menu_about">Quiénes Somos</a></li>
+        <li><a href="productos.html" data-i18n="menu_products">Productos</a></li>
+        <li><a href="solicitud.html" data-i18n="menu_request">Solicitud</a></li>
+        <li><a href="soporte.html" data-i18n="menu_support">Soporte</a></li>
+        <li><a href="contactanos.html" data-i18n="menu_contact">Contáctanos</a></li>
+        <li><a href="empleo.html" data-i18n="menu_jobs">Empleo</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+
+    <div class="lang-selector" aria-label="Selector de idioma">
+      <button class="lang-btn" data-lang="ES">ES</button>
+      <button class="lang-btn" data-lang="EN">EN</button>
+      <button class="lang-btn" data-lang="PT">PT</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" style="background-image:url('assets/img/hero/hero-fttx.svg'); background-size:cover; background-position:center;">
+      <h1 data-i18n="hero_title">Soluciones en Fibra Óptica para Colombia y LATAM</h1>
+      <p data-i18n="hero_sub">Instalación FTTx, patch cords a medida, venta de equipos y soporte técnico especializado.</p>
+      <div class="cta">
+        <a class="btn" href="productos.html" data-i18n="cta_view_products">Ver Productos</a>
+        <a class="btn" href="solicitud.html" data-i18n="cta_request">Solicitar</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="families_title">Familias de Producto</h2>
+      <div class="cards">
+        <article class="card"><img src="assets/img/productos/fusion.svg" alt="Fusion Splicer"><h3>Fusion Splicer</h3><p>Empalmadoras para backbone y FTTx.</p></article>
+        <article class="card"><img src="assets/img/productos/otdr.svg" alt="OTDR"><h3>OTDR</h3><p>Reflectometría avanzada para diagnóstico óptico.</p></article>
+        <article class="card"><img src="assets/img/productos/instrumentos.svg" alt="Instrumentación"><h3>Instrumentación</h3><p>Power meters, fuentes de luz e identificadores.</p></article>
+        <article class="card"><img src="assets/img/productos/odn.svg" alt="ODN"><h3>ODN</h3><p>Splitters, cajas de distribución y componentes pasivos.</p></article>
+        <article class="card"><img src="assets/img/productos/limpieza.svg" alt="Limpieza"><h3>Limpieza</h3><p>Inspección y limpieza de conectores.</p></article>
+        <article class="card"><img src="assets/img/productos/herramientas.svg" alt="Herramientas"><h3>Herramientas</h3><p>Peladoras, cortadoras y kits de instalación.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      © <span id="year"></span> <strong>Fibracore.pro</strong> — 
+      <span id="f_direccion"></span> · 
+      <a id="f_email"></a> · 
+      <a id="f_tel"></a> ·
+      <a id="f_whatsapp" target="_blank" rel="noopener" data-i18n="footer_whatsapp">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>
