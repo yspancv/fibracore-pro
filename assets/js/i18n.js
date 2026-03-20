@@ -49,6 +49,7 @@ const LANG = {
     msg_required_fields: "Por favor completa los campos obligatorios.",
     msg_sent_ok: "¡Enviado correctamente!",
     msg_cv_ok: "Solicitud enviada correctamente. Nuestro equipo revisará tu CV.",
+	ph_lookFor: "Buscar familia (ej: OTDR, Fusion, ODN)…",
 
     footer_whatsapp: "WhatsApp"
   },
@@ -102,6 +103,7 @@ const LANG = {
     msg_required_fields: "Please complete required fields.",
     msg_sent_ok: "Sent successfully!",
     msg_cv_ok: "Application sent. Our team will review your CV.",
+	ph_lookFor: "Looks for Family (ex: OTDR, Fusion, ODN)…",
 
     footer_whatsapp: "WhatsApp"
   },
@@ -154,6 +156,7 @@ const LANG = {
     msg_required_fields: "Por favor, complete os campos obrigatórios.",
     msg_sent_ok: "Enviado com sucesso!",
     msg_cv_ok: "Candidatura enviada. Nossa equipe analisará seu CV.",
+	ph_lookFor: "Pesquisar família (ex.: OTDR, Fusion, ODN)...",
 
     footer_whatsapp: "WhatsApp"
   }
