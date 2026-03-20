@@ -1,14 +1,26 @@
 // assets/js/main.js (producción)
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {  
   document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;  
+      // Save
+      localStorage.setItem("lang", lang);
+      window.currentLang = lang;  
+      // Apply immediately
+      if (typeof applyLang === "function") {
+        applyLang();
+      }
+    });
+  });
+/*  document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.dataset.lang;
       localStorage.setItem("lang", lang);
       window.currentLang = lang;
       if (typeof applyLang === 'function') applyLang();
     });
-  });
+  });*/
 
   const burger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav ul");
